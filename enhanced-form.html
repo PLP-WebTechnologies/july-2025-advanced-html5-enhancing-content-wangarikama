@@ -1,0 +1,137 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form Showcase</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+        header { background-color: #f4f4f4; padding: 10px; text-align: center; }
+        section { margin-bottom: 40px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        ul { margin-left: 20px; }
+        img { max-width: 100%; height: auto; }
+        form { max-width: 600px; margin: 0 auto; }
+        fieldset { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select, textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
+        button { padding: 10px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Showcase of Lists, Tables, and Media</h1>
+        <p>This page demonstrates web elements and includes a comprehensive form.</p>
+    </header>
+
+    <section id="lists">
+        <h2>Features List</h2>
+        <ul>
+            <li>User-friendly interface</li>
+            <li>Responsive design</li>
+            <li>Accessibility support</li>
+            <li>Fast loading</li>
+        </ul>
+    </section>
+
+    <section id="tables">
+        <h2>Employee Data Table</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Developer</td>
+                    <td>IT</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Designer</td>
+                    <td>Marketing</td>
+                </tr>
+                <tr>
+                    <td>Mike Johnson</td>
+                    <td>Manager</td>
+                    <td>HR</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>Sample Media</h2>
+        <img src="https://via.placeholder.com/400x200?text=Sample+Image" alt="A placeholder image representing web media">
+        <p>Above is a sample image. In a real scenario, this could be replaced with actual media files like videos or audio.</p>
+    </section>
+
+    <section id="form">
+        <h2>Contact Form</h2>
+        <p>Please fill out the form below. All fields marked with * are required.</p>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required minlength="2" autocomplete="name">
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="email">
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="^\+?[0-9\s\-\(\)]+$" autocomplete="tel">
+
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="experience">Years of Experience *</label>
+                <input type="number" id="experience" name="experience" min="0" max="50" required placeholder="Enter years">
+
+                <label>Gender</label>
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="other"> Other</label>
+
+                <label>Interests (Select all that apply)</label>
+                <label><input type="checkbox" name="interests" value="tech"> Technology</label>
+                <label><input type="checkbox" name="interests" value="design"> Design</label>
+                <label><input type="checkbox" name="interests" value="marketing"> Marketing</label>
+
+                <label for="department">Department *</label>
+                <select id="department" name="department" required>
+                    <option value="">Select a department</option>
+                    <option value="it">IT</option>
+                    <option value="hr">HR</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Details</legend>
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your message" required minlength="10"></textarea>
+
+                <label for="readonly-field">Confirmation Code (Read-only)</label>
+                <input type="text" id="readonly-field" name="code" value="CONF123" readonly>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Enhanced Form Showcase. All rights reserved.</p>
+    </footer>
+</body>
+</html>
